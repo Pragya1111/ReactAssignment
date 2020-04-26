@@ -1,27 +1,19 @@
 import React from 'react';
-
 class HeaderComponent extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            headerText : "Task Management System",
+            logo : "TMS"
+        }
+    }
     render(){
         return(
-            <div id="header">
-                <div id="logo">
-                    <img src="./yash-logo.png" width="100" ></img>
-                </div>
-                <div id="navigation">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Service</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-                <span id="clr"></span>
+            <div>
+               <h1>{this.state.headerText} </h1>
+               <h1>{this.state.logo} </h1>
             </div>
-           
-            
-        )
+        );
     }
-
 }
-
 export default HeaderComponent;
